@@ -22,7 +22,7 @@ public class BusinessDelegate {
 	
 	private BusinessDelegate() throws CommunicationException {
 		try {
-			remota = (IRemota)Naming.lookup("rmi://localhost/Godio");
+			remota = (IRemota)Naming.lookup("rmi://localhost/Abc");
 		} catch (MalformedURLException e) {
 			throw new CommunicationException("La dirección del servidor es incorrecta");
 		} catch (RemoteException e) {
