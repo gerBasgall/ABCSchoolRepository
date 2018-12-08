@@ -52,7 +52,7 @@ public class BusinessDelegate {
 		try {
 			 remota.altaAlumno(dni, nombre, mail, telefono, domicilio, fechaNacimiento, password);
 		} catch (RemoteException e) {
-			throw new CommunicationException("Error de comunicación al loguear cliente");
+			throw new CommunicationException("Error al hacer alta alumno");
 		}
 	}
 	
@@ -60,7 +60,7 @@ public class BusinessDelegate {
 		try {
 			 remota.modificarAlumno(dni, nombre, mail, telefono, domicilio, fechaNacimiento, password);
 		} catch (RemoteException e) {
-			throw new CommunicationException("Error de comunicación al loguear cliente");
+			throw new CommunicationException("Error al modificar el alumno");
 		}
 	}
 	
@@ -68,7 +68,7 @@ public class BusinessDelegate {
 		try {
 			 remota.bajaAlumno(dni);
 		} catch (RemoteException e) {
-			throw new CommunicationException("Error de comunicación al loguear cliente");
+			throw new CommunicationException("Error al dar de baja alumno");
 		}
 	}
 	
@@ -76,7 +76,7 @@ public class BusinessDelegate {
 		try {
 			 return remota.buscarAlumno(dni);
 		} catch (RemoteException e) {
-			throw new CommunicationException("Error de comunicación al loguear cliente");
+			throw new CommunicationException("Error al buscar alumno");
 		}
 	}
 	
@@ -84,7 +84,7 @@ public class BusinessDelegate {
 		try {
 			 remota.altaProfesor(dni, nombre, mail, telefono, domicilio, fechaNacimiento, password, domicilioClases, anticipacion);
 		} catch (RemoteException e) {
-			throw new CommunicationException("Error de comunicación al loguear cliente");
+			throw new CommunicationException("Error al dar de alta profesor");
 		}
 	}
 	
@@ -92,7 +92,7 @@ public class BusinessDelegate {
 		try {
 			 remota.modificarProfesor(dni, nombre, mail, telefono, domicilio, fechaNacimiento, password, domicilioClases, anticipacion);
 		} catch (RemoteException e) {
-			throw new CommunicationException("Error de comunicación al loguear cliente");
+			throw new CommunicationException("Error al modificar profesor");
 		}
 	}
 	
@@ -100,7 +100,7 @@ public class BusinessDelegate {
 		try {
 			 remota.bajaProfesor(dni);
 		} catch (RemoteException e) {
-			throw new CommunicationException("Error de comunicación al loguear cliente");
+			throw new CommunicationException("Error al dar de baja profesor");
 		}
 	}
 	
@@ -108,7 +108,7 @@ public class BusinessDelegate {
 		try {
 			 return remota.buscarProfesor(dni);
 		} catch (RemoteException e) {
-			throw new CommunicationException("Error de comunicación al loguear cliente");
+			throw new CommunicationException("Error al buscar profesor");
 		}
 	}
 	
@@ -117,7 +117,7 @@ public class BusinessDelegate {
 		try {
 			remota.altaClase(materia, fecha, horario, estado, dniProfesor);
 		} catch (RemoteException e) {
-			throw new CommunicationException("Error de comunicación al loguear cliente");
+			throw new CommunicationException("Error al dar de alta clase");
 		}
 	}
 	
@@ -125,7 +125,7 @@ public class BusinessDelegate {
 		try {
 			return remota.buscarMateria(nombre);
 		} catch (RemoteException e) {
-			throw new CommunicationException("Error de comunicación al loguear cliente");
+			throw new CommunicationException("Error al buscar materia");
 		}
 	}
 	
@@ -133,7 +133,7 @@ public class BusinessDelegate {
 		try {
 			remota.altaMateria(nombreMat);
 		} catch (RemoteException e) {
-			throw new CommunicationException("Error de comunicación al loguear cliente");
+			throw new CommunicationException("Error al dar de alta materia");
 		}
 	}
 	
@@ -141,7 +141,7 @@ public class BusinessDelegate {
 		try {
 			return remota.buscarReserva(idReserva);
 		} catch (RemoteException e) {
-			throw new CommunicationException("Error de comunicación al loguear cliente");
+			throw new CommunicationException("Error  al buscar reserva");
 		}
 	}
 	
@@ -149,7 +149,7 @@ public class BusinessDelegate {
 		try {
 			remota.altaReserva(idReserva, descuento, monto, cantAlum, paga, fecha, dniAlumno, clases);
 		} catch (RemoteException e) {
-			throw new CommunicationException("Error de comunicación al loguear cliente");
+			throw new CommunicationException("Erroral dar de alta reserva");
 		}
 	}
 	
@@ -157,7 +157,7 @@ public class BusinessDelegate {
 		try {
 			remota.bajaReserva(idReserva);
 		} catch (RemoteException e) {
-			throw new CommunicationException("Error de comunicación al loguear cliente");
+			throw new CommunicationException("Error al dar de baja reserva");
 		}
 	}
 	
@@ -165,7 +165,7 @@ public class BusinessDelegate {
 		try {
 			remota.generarFactura(idReserva, tipo, remitente, medioPago);
 		} catch (RemoteException e) {
-			throw new CommunicationException("Error de comunicación al loguear cliente");
+			throw new CommunicationException("Error al generar factura");
 		}
 	}
 	
@@ -173,7 +173,7 @@ public class BusinessDelegate {
 		try {
 			return remota.verClasesDisponibles();
 		} catch (RemoteException e) {
-			throw new CommunicationException("Error de comunicación al loguear cliente");
+			throw new CommunicationException("No se pudieron obtener clases disponibles");
 		}
 	}
 	
@@ -181,7 +181,7 @@ public class BusinessDelegate {
 		try {
 			return remota.obtenerReservasAlumno(dniAlumno);
 		} catch (RemoteException e) {
-			throw new CommunicationException("Error de comunicación al loguear cliente");
+			throw new CommunicationException("Error al obtener reservas de alumno");
 		}
 	}
 	
@@ -189,7 +189,7 @@ public class BusinessDelegate {
 		try {
 			return remota.obtenerClaseProfesor(dniProf);
 		} catch (RemoteException e) {
-			throw new CommunicationException("Error de comunicación al loguear cliente");
+			throw new CommunicationException("Error obtener clase profesor");
 		}
 	}
 	
@@ -197,7 +197,7 @@ public class BusinessDelegate {
 		try {
 			return remota.obtenerResenasProfesor(dniProfesor);
 		} catch (RemoteException e) {
-			throw new CommunicationException("Error de comunicación al loguear cliente");
+			throw new CommunicationException("Error  al obtener resenas profesor");
 		}
 	}
 }
