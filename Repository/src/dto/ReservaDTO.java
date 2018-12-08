@@ -1,6 +1,7 @@
 package dto;
 
 import java.util.Date;
+import java.util.List;
 
 public class ReservaDTO {
 	
@@ -14,7 +15,7 @@ public class ReservaDTO {
 	private int factura;
 	
 	public ReservaDTO(Integer idReserva, Float descuento, Float monto, Integer cantAlum, boolean paga, Date fecha,
-			String alumno, int factura) {
+			String alumno, int factura, List<Integer> clases) {
 		super();
 		this.idReserva = idReserva;
 		this.descuento = descuento;
