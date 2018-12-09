@@ -4,7 +4,7 @@ import java.net.MalformedURLException;
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
-import java.sql.Date;
+import java.util.Date;
 import java.util.ArrayList;
 
 import javax.naming.CommunicationException;

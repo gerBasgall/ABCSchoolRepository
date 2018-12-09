@@ -3,7 +3,7 @@ package interfaces;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
-import java.sql.Date;
+import java.util.Date;
 import java.util.ArrayList;
 import dto.AlumnoDTO;
 import dto.ClaseDTO;
