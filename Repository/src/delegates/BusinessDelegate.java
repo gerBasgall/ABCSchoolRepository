@@ -200,4 +200,11 @@ public class BusinessDelegate {
 			throw new CommunicationException("Error  al obtener resenas profesor");
 		}
 	}
+	public ArrayList<MateriaDTO> obtenerMateriasProfesor(int idUsuario) throws CommunicationException{
+		try {
+			return remota.obtenerMateriasProfesor(idUsuario);
+		} catch (RemoteException e) {
+			throw new CommunicationException("Error  al obtener materias profesor");
+		}
+	}
 }
