@@ -22,6 +22,15 @@ public abstract class UsuarioDTO {
 		this.fechaNacimiento=fechaNacimiento;
 		this.contra=contra;
 	}
+	public UsuarioDTO(String dni, String nombre, String mail, String telefono, String domicilio, Date fechaNacimiento,String contra) {
+		this.dni=dni;
+		this.nombre=nombre;
+		this.mail=mail;
+		this.telefono=telefono;
+		this.domicilio=domicilio;
+		this.fechaNacimiento=fechaNacimiento;
+		this.contra=contra;
+	}
 	
 	public String getDni() {
 		return dni;
