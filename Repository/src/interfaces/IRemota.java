@@ -59,6 +59,8 @@ public interface IRemota extends Remote{
 	public ArrayList<ResenaDTO> obtenerResenasProfesor(String dniProfesor) throws RemoteException;
 	
 	public ArrayList<MateriaDTO> obtenerMateriasProfesor(int idUsuario) throws RemoteException;
+	
+	public FacturaDTO buscarFactura(int idReserva) throws RemoteException;
 }
 	
 
