@@ -50,6 +50,14 @@ public abstract class UsuarioDTO {
 	public String getContra() {
 		return contra;
 	}
+
+	public Integer getIdUsuario() {
+		return idUsuario;
+	}
+
+	public void setIdUsuario(Integer idUsuario) {
+		this.idUsuario = idUsuario;
+	}
 	
 	
 }
