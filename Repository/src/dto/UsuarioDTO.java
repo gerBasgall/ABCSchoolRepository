@@ -3,6 +3,7 @@ package dto;
 import java.util.Date;
 
 public abstract class UsuarioDTO {
+	protected Integer idUsuario;
 	protected String dni;
 	protected String nombre;
 	protected String mail;
@@ -11,7 +12,8 @@ public abstract class UsuarioDTO {
 	protected Date fechaNacimiento;
 	protected String contra;
 	
-	public UsuarioDTO(String dni, String nombre, String mail, String telefono, String domicilio, Date fechaNacimiento,String contra) {
+	public UsuarioDTO(int idUsuario,String dni, String nombre, String mail, String telefono, String domicilio, Date fechaNacimiento,String contra) {
+		this.idUsuario=idUsuario;
 		this.dni=dni;
 		this.nombre=nombre;
 		this.mail=mail;
