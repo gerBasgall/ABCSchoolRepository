@@ -11,6 +11,7 @@ import javax.naming.CommunicationException;
 
 import dto.AlumnoDTO;
 import dto.ClaseDTO;
+import dto.FacturaDTO;
 import dto.MateriaDTO;
 import dto.ProfesorDTO;
 import dto.ResenaDTO;
@@ -211,7 +212,7 @@ public class BusinessDelegate {
 		try {
 			return remota.buscarFactura(idReserva);
 		}catch (RemoteException e) {
-			throw new ComunicacionException("Error al obtener la factura");
+			throw new CommunicationException("Error al obtener la factura");
 		}
 	}
 }
