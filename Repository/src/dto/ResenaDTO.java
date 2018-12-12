@@ -1,6 +1,12 @@
 package dto;
 
-public class ResenaDTO {
+import java.io.Serializable;
+
+public class ResenaDTO implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private float puntuacion;
 	private String comentario;
 

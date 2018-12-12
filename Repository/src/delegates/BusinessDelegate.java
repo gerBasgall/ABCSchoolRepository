@@ -203,7 +203,8 @@ public class BusinessDelegate {
 	}
 	public ArrayList<MateriaDTO> obtenerMateriasProfesor(int idUsuario) throws CommunicationException{
 		try {
-			return remota.obtenerMateriasProfesor(idUsuario);
+			ArrayList<MateriaDTO> m = remota.obtenerMateriasProfesor(idUsuario);
+			return m;
 		} catch (RemoteException e) {
 			throw new CommunicationException("Error  al obtener materias profesor");
 		}
@@ -213,6 +214,22 @@ public class BusinessDelegate {
 			return remota.buscarFactura(idReserva);
 		}catch (RemoteException e) {
 			throw new CommunicationException("Error al obtener la factura");
+		}
+	}
+	
+	public ArrayList<MateriaDTO> obtenerTodasMaterias() throws CommunicationException{
+		try {
+			return remota.obtenerTodasMaterias();
+		} catch (RemoteException e) {
+			throw new CommunicationException("Error al obtener todas las materias");
+		}
+	}
+	
+	public ArrayList<ClaseDTO> obtenerClasesReserva(int idReserva) throws CommunicationException{
+		try {
+			return remota.obtenerClasesReserva(idReserva);
+		} catch (RemoteException e) {
+			throw new CommunicationException("Error al obtener todas las clases de la reserva");
 		}
 	}
 }

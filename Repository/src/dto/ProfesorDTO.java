@@ -1,10 +1,15 @@
 package dto;
 
+import java.io.Serializable;
 import java.util.Date;
 
 
-public class ProfesorDTO extends UsuarioDTO{
+public class ProfesorDTO extends UsuarioDTO implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Float anticipacionReserva;
 	private Float puntuacion;
 	private String domicilioClases;

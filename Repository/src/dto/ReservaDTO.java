@@ -1,10 +1,16 @@
 package dto;
 
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class ReservaDTO {
+public class ReservaDTO implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Integer idReserva;
 	private Float descuento;
 	private Float monto;
@@ -13,9 +19,10 @@ public class ReservaDTO {
 	private Date fecha;
 	private String alumno;
 	private int factura;
+	private ArrayList<ClaseDTO> clases;
 	
 	public ReservaDTO(Integer idReserva, Float descuento, Float monto, Integer cantAlum, boolean paga, Date fecha,
-			String alumno, int factura, List<Integer> clases) {
+			String alumno, int factura, ArrayList<ClaseDTO> clases) {
 		super();
 		this.idReserva = idReserva;
 		this.descuento = descuento;
@@ -25,6 +32,17 @@ public class ReservaDTO {
 		this.fecha = fecha;
 		this.alumno = alumno;
 		this.factura = factura;
+		this.clases = clases;
+	}
+	
+	public ReservaDTO(Integer idReserva, Float descuento, Float monto, Integer cantAlum, boolean paga, Date fecha) {
+		super();
+		this.idReserva = idReserva;
+		this.descuento = descuento;
+		this.monto = monto;
+		this.cantAlum = cantAlum;
+		this.paga = paga;
+		this.fecha = fecha;
 	}
 
 	public Integer getIdReserva() {
@@ -89,5 +107,13 @@ public class ReservaDTO {
 
 	public void setFactura(int factura) {
 		this.factura = factura;
+	}
+	
+	public void addClase(ClaseDTO clase){
+		clases.add(clase);
+	}
+
+	public ArrayList<ClaseDTO> getClases() {
+		return clases;
 	}
 }

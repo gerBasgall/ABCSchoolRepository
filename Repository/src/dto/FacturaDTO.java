@@ -1,8 +1,13 @@
 package dto;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class FacturaDTO {
+public class FacturaDTO implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private float monto;
 	private String tipo;
 	private String remitente;

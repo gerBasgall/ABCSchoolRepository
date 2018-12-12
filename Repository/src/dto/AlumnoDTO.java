@@ -1,8 +1,13 @@
 package dto;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class AlumnoDTO extends UsuarioDTO{
+public class AlumnoDTO extends UsuarioDTO implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private float saldoAFavor;
 	
 	public AlumnoDTO(int idUsuario,String dni, String nombre, String mail, String telefono, String domicilio, Date fechaNacimiento,String password,float saldoAFavor) {

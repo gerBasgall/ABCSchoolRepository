@@ -1,8 +1,13 @@
 package dto;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public abstract class UsuarioDTO {
+public abstract class UsuarioDTO implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	protected Integer idUsuario;
 	protected String dni;
 	protected String nombre;

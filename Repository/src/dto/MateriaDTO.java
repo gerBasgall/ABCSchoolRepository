@@ -1,7 +1,13 @@
 package dto;
 
-public class MateriaDTO {
+import java.io.Serializable;
+
+public class MateriaDTO implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String nombre;
 	private Integer idMateria;
 	

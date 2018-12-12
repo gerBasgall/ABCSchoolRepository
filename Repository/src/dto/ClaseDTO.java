@@ -1,7 +1,12 @@
 package dto;
 
+import java.io.Serializable;
 
-public class ClaseDTO {
+public class ClaseDTO implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String materia;
 	private Float horario;
 	private String estado;
